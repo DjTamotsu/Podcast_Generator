@@ -12,8 +12,8 @@ inputs:
   name:
     description: The name of the commiter
     required: true
-    defaults: ${{ github.actor }}@localhost
+    defaults: "${GITHUB_ACTOR}"
   email:
     description: The email of the commiter
     required: true
-    defaults: ${{ input.email }}@localhost
+    defaults: "${INPUT_EMAIL}"
