@@ -1,0 +1,19 @@
+name: "Podcast Generator"
+author: "T"
+description: "Podcast generator used by many."
+
+RUNS:
+  USING: "docker"
+  IMAGE: "Dockerfile"
+BRANDING:
+  ICON: "git-branch"
+  COLOR: "red"
+INPUTS:
+  NAME:
+    DESCRIPTION: The name of the commiter.
+    REQUIRED: true
+    DEFAULT: ${{ github.actor }}@localhost
+  EMAIL:
+    DESCRIPTION: The email of the commiter.
+    REQUIRED: true
+    DEFAULT: ${{ input.email }}@localhost
